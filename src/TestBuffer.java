@@ -5,60 +5,60 @@ import java.nio.IntBuffer;
 public class TestBuffer {
 
 	public static void main(String[] args) {
-		System.out.println("*******************1 ¡¢»ù±¾²Ù×÷*************************************" );
-		// 1 »ù±¾²Ù×÷
+		System.out.println("*******************1 ã€åŸºæœ¬æ“ä½œ*************************************" );
+		// 1 åŸºæœ¬æ“ä½œ
 		IntBuffer buf = IntBuffer.allocate(10);
-		buf.put(13);// positionÎ»ÖÃ£º0 - > 1
-		buf.put(21);// positionÎ»ÖÃ£º1 - > 2
-		buf.put(35);// positionÎ»ÖÃ£º2 - > 3
-		//°ÑÎ»ÖÃ¸´Î»Îª0£¬Ò²¾ÍÊÇpositionÎ»ÖÃ£º3 - > 0
+		buf.put(13);// positionä½ç½®ï¼š0 - > 1
+		buf.put(21);// positionä½ç½®ï¼š1 - > 2
+		buf.put(35);// positionä½ç½®ï¼š2 - > 3
+		//æŠŠä½ç½®å¤ä½ä¸º0ï¼Œä¹Ÿå°±æ˜¯positionä½ç½®ï¼š3 - > 0
 		buf.flip();
-		System.out.println("Ê¹ÓÃflip¸´Î»£º" + buf);
-		System.out.println("ÈİÁ¿Îª: " + buf.capacity());	//ÈİÁ¿Ò»µ©³õÊ¼»¯ºó²»ÔÊĞí¸Ä±ä£¨warp·½·¨°ü¹üÊı×é³ıÍâ£©
-		System.out.println("ÏŞÖÆÎª: " + buf.limit());		//ÓÉÓÚÖ»×°ÔØÁËÈı¸öÔªËØ,ËùÒÔ¿É¶ÁÈ¡»òÕß²Ù×÷µÄÔªËØÎª3 Ôòlimit=3
+		System.out.println("ä½¿ç”¨flipå¤ä½ï¼š" + buf);
+		System.out.println("å®¹é‡ä¸º: " + buf.capacity());	//å®¹é‡ä¸€æ—¦åˆå§‹åŒ–åä¸å…è®¸æ”¹å˜ï¼ˆwarpæ–¹æ³•åŒ…è£¹æ•°ç»„é™¤å¤–ï¼‰
+		System.out.println("é™åˆ¶ä¸º: " + buf.limit());		//ç”±äºåªè£…è½½äº†ä¸‰ä¸ªå…ƒç´ ,æ‰€ä»¥å¯è¯»å–æˆ–è€…æ“ä½œçš„å…ƒç´ ä¸º3 åˆ™limit=3
 		
-		System.out.println("»ñÈ¡ÏÂ±êÎª1µÄÔªËØ£º" + buf.get(1));
-		System.out.println("get(index)·½·¨£¬positionÎ»ÖÃ²»¸Ä±ä£º" + buf);
+		System.out.println("è·å–ä¸‹æ ‡ä¸º1çš„å…ƒç´ ï¼š" + buf.get(1));
+		System.out.println("get(index)æ–¹æ³•ï¼Œpositionä½ç½®ä¸æ”¹å˜ï¼š" + buf);
 		buf.put(1, 4);
-		System.out.println("put(index, change)·½·¨£¬positionÎ»ÖÃ²»±ä£º" + buf);;
+		System.out.println("put(index, change)æ–¹æ³•ï¼Œpositionä½ç½®ä¸å˜ï¼š" + buf);;
 		
 		for (int i = 0; i < buf.limit(); i++) {
-			//µ÷ÓÃget·½·¨»áÊ¹Æä»º³åÇøÎ»ÖÃ£¨position£©ÏòºóµİÔöÒ»Î»
+			//è°ƒç”¨getæ–¹æ³•ä¼šä½¿å…¶ç¼“å†²åŒºä½ç½®ï¼ˆpositionï¼‰å‘åé€’å¢ä¸€ä½
 			System.out.print(buf.get() + "\t");
 		}
-		System.out.println("buf¶ÔÏó±éÀúÖ®ºóÎª: " + buf);
+		System.out.println("bufå¯¹è±¡éå†ä¹‹åä¸º: " + buf);
 		
-		System.out.println("*******************2¡¢wrap·½·¨Ê¹ÓÃ*************************************" );
-		// 2 wrap·½·¨Ê¹ÓÃ
-		//  wrap·½·¨»á°ü¹üÒ»¸öÊı×é: Ò»°ãÕâÖÖÓÃ·¨²»»áÏÈ³õÊ¼»¯»º´æ¶ÔÏóµÄ³¤¶È£¬ÒòÎªÃ»ÓĞÒâÒå£¬×îºó»¹»á±»wrapËù°ü¹üµÄÊı×é¸²¸Çµô¡£ 
-		//  ²¢ÇÒwrap·½·¨ĞŞ¸Ä»º³åÇø¶ÔÏóµÄÊ±ºò£¬Êı×é±¾ÉíÒ²»á¸ú×Å·¢Éú±ä»¯¡£                     
+		System.out.println("*******************2ã€wrapæ–¹æ³•ä½¿ç”¨*************************************" );
+		// 2 wrapæ–¹æ³•ä½¿ç”¨
+		//  wrapæ–¹æ³•ä¼šåŒ…è£¹ä¸€ä¸ªæ•°ç»„: ä¸€èˆ¬è¿™ç§ç”¨æ³•ä¸ä¼šå…ˆåˆå§‹åŒ–ç¼“å­˜å¯¹è±¡çš„é•¿åº¦ï¼Œå› ä¸ºæ²¡æœ‰æ„ä¹‰ï¼Œæœ€åè¿˜ä¼šè¢«wrapæ‰€åŒ…è£¹çš„æ•°ç»„è¦†ç›–æ‰ã€‚ 
+		//  å¹¶ä¸”wrapæ–¹æ³•ä¿®æ”¹ç¼“å†²åŒºå¯¹è±¡çš„æ—¶å€™ï¼Œæ•°ç»„æœ¬èº«ä¹Ÿä¼šè·Ÿç€å‘ç”Ÿå˜åŒ–ã€‚                     
 		int[] arr = new int[]{1,2,5};
 		IntBuffer buf1 = IntBuffer.wrap(arr);
 		System.out.println(buf1);
 		
 		IntBuffer buf2 = IntBuffer.wrap(arr, 0 , 2);
-		//ÕâÑùÊ¹ÓÃ±íÊ¾ÈİÁ¿ÎªÊı×éarrµÄ³¤¶È£¬µ«ÊÇ¿É²Ù×÷µÄÔªËØÖ»ÓĞÊµ¼Ê½øÈë»º´æÇøµÄÔªËØ³¤¶È
+		//è¿™æ ·ä½¿ç”¨è¡¨ç¤ºå®¹é‡ä¸ºæ•°ç»„arrçš„é•¿åº¦ï¼Œä½†æ˜¯å¯æ“ä½œçš„å…ƒç´ åªæœ‰å®é™…è¿›å…¥ç¼“å­˜åŒºçš„å…ƒç´ é•¿åº¦
 		System.out.println(buf2);
 		
-		System.out.println("*******************2¡¢ÆäËû·½·¨*************************************" );
-		// 3 ÆäËû·½·¨
+		System.out.println("*******************2ã€å…¶ä»–æ–¹æ³•*************************************" );
+		// 3 å…¶ä»–æ–¹æ³•
 		IntBuffer buf4 = IntBuffer.allocate(10);
 		int[] arr4 = new int[]{1,2,5};
 		buf4.put(arr4);
 		System.out.println(buf4);
-		//Ò»ÖÖ¸´ÖÆ·½·¨
+		//ä¸€ç§å¤åˆ¶æ–¹æ³•
 		IntBuffer buf5 = buf1.duplicate();
 		System.out.println(buf5);
 		
-		//ÉèÖÃbuf1µÄÎ»ÖÃÊôĞÔ
+		//è®¾ç½®buf1çš„ä½ç½®å±æ€§
 		//buf1.position(0);
 		buf1.flip();
 		System.out.println(buf1);
 		
-		System.out.println("¿É¶ÁÊı¾İÎª£º" + buf1.remaining());
+		System.out.println("å¯è¯»æ•°æ®ä¸ºï¼š" + buf1.remaining());
 		
 		int[] arr2 = new int[buf1.remaining()];
-		//½«»º³åÇøÊı¾İ·ÅÈëarr2Êı×éÖĞÈ¥
+		//å°†ç¼“å†²åŒºæ•°æ®æ”¾å…¥arr2æ•°ç»„ä¸­å»
 		buf1.get(arr2);
 		for(int i : arr2){
 			System.out.print(Integer.toString(i) + ",");

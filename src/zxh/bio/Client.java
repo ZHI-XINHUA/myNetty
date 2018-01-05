@@ -1,4 +1,4 @@
-package zhx.bio;
+package zxh.bio;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,19 +17,19 @@ public class Client {
 		PrintWriter out = null;
 		
 		try{
-			socket = new Socket(ADDRESS, PORT);//½¨Á¢Óë·şÎñÆ÷¶ËµÄÁ¬½Ó£¬Èç¹û·şÎñÆ÷Ã»Æô¶¯£¬±¨Connection refusedÒì³£
-			//¿ÉÒÔµÃµ½Ò»¸öÊäÈëÁ÷£¬¿Í»§¶ËµÄSocket¶ÔÏóÉÏµÄgetInputStream·½·¨µÃµ½ÊäÈëÁ÷ÆäÊµ¾ÍÊÇ´Ó·şÎñÆ÷¶Ë·¢»ØµÄÊı¾İ¡£
+			socket = new Socket(ADDRESS, PORT);//å»ºç«‹ä¸æœåŠ¡å™¨ç«¯çš„è¿æ¥ï¼Œå¦‚æœæœåŠ¡å™¨æ²¡å¯åŠ¨ï¼ŒæŠ¥Connection refusedå¼‚å¸¸
+			//å¯ä»¥å¾—åˆ°ä¸€ä¸ªè¾“å…¥æµï¼Œå®¢æˆ·ç«¯çš„Socketå¯¹è±¡ä¸Šçš„getInputStreamæ–¹æ³•å¾—åˆ°è¾“å…¥æµå…¶å®å°±æ˜¯ä»æœåŠ¡å™¨ç«¯å‘å›çš„æ•°æ®ã€‚
 			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			//µÃµ½µÄÊÇÒ»¸öÊä³öÁ÷£¬¿Í»§¶ËµÄSocket¶ÔÏóÉÏµÄgetOutputStream·½·¨µÃµ½µÄÊä³öÁ÷ÆäÊµ¾ÍÊÇ·¢ËÍ¸ø·şÎñÆ÷¶ËµÄÊı¾İ¡£·şÎñÆ÷¶ËÉÏµÄÊ¹ÓÃ
+			//å¾—åˆ°çš„æ˜¯ä¸€ä¸ªè¾“å‡ºæµï¼Œå®¢æˆ·ç«¯çš„Socketå¯¹è±¡ä¸Šçš„getOutputStreamæ–¹æ³•å¾—åˆ°çš„è¾“å‡ºæµå…¶å®å°±æ˜¯å‘é€ç»™æœåŠ¡å™¨ç«¯çš„æ•°æ®ã€‚æœåŠ¡å™¨ç«¯ä¸Šçš„ä½¿ç”¨
 			out = new PrintWriter(socket.getOutputStream(), true);
 			
-			//Ïò·şÎñÆ÷¶Ë·¢ËÍĞÅÏ¢
-			out.println("ÎÒÊÇ¿Í»§¶ËĞÅÏ¢...");
-			out.println("ÎÒÊÇ¿Í»§¶ËĞÅÏ¢2...");
+			//å‘æœåŠ¡å™¨ç«¯å‘é€ä¿¡æ¯
+			out.println("æˆ‘æ˜¯å®¢æˆ·ç«¯ä¿¡æ¯...");
+			out.println("æˆ‘æ˜¯å®¢æˆ·ç«¯ä¿¡æ¯2...");
 			
-			//»ñÈ¡·şÎñÆ÷ÏìÓ¦ĞÅÏ¢
+			//è·å–æœåŠ¡å™¨å“åº”ä¿¡æ¯
 			String response = in.readLine();
-			System.out.println("Client»ñÈ¡ServerÏìÓ¦ĞÅÏ¢: " + response);
+			System.out.println("Clientè·å–Serverå“åº”ä¿¡æ¯: " + response);
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{

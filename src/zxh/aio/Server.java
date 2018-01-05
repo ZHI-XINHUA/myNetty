@@ -8,28 +8,28 @@ import java.util.concurrent.Executors;
 
 
 public class Server {
-	//Ïß³Ì³Ø
+	//çº¿ç¨‹æ± 
 	private ExecutorService executorService;
-	//Ïß³Ì×é
+	//çº¿ç¨‹ç»„
 	private AsynchronousChannelGroup threadGroup;
-	//·şÎñÆ÷Í¨µÀ
+	//æœåŠ¡å™¨é€šé“
 	public AsynchronousServerSocketChannel assc;
 	
 	public Server(int port){
 		try {
-			//´´½¨Ò»¸ö»º´æ³Ø
+			//åˆ›å»ºä¸€ä¸ªç¼“å­˜æ± 
 			executorService = Executors.newCachedThreadPool();
-			//´´½¨Ïß³Ì×é
+			//åˆ›å»ºçº¿ç¨‹ç»„
 			threadGroup = AsynchronousChannelGroup.withCachedThreadPool(executorService, 1);
-			//´´½¨·şÎñÆ÷Í¨µÀ
+			//åˆ›å»ºæœåŠ¡å™¨é€šé“
 			assc = AsynchronousServerSocketChannel.open(threadGroup);
-			//½øĞĞ°ó¶¨
+			//è¿›è¡Œç»‘å®š
 			assc.bind(new InetSocketAddress(port));
 			
 			System.out.println("server start , port : " + port);
-			//½øĞĞ×èÈû
+			//è¿›è¡Œé˜»å¡
 			assc.accept(this,new ServerCompletionHandler());
-			//Ò»Ö±×èÈû ²»ÈÃ·şÎñÆ÷Í£Ö¹
+			//ä¸€ç›´é˜»å¡ ä¸è®©æœåŠ¡å™¨åœæ­¢
 			Thread.sleep(Integer.MAX_VALUE);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

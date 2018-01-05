@@ -1,25 +1,25 @@
-package zhx.bio;
+package zxh.bio;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
-* ¿Í»§¶Ë
+* å®¢æˆ·ç«¯
  */
 public class Server {
 
-	final static int PROT = 8765;//¶Ë¿Ú
+	final static int PROT = 8765;//ç«¯å£
 	
 	public static void main(String[] args) {
 		ServerSocket serverSocker = null;
 		try {
-			serverSocker = new ServerSocket(PROT);//¼àÌı¶Ë¿Ú
-			System.out.println("Server Æô¶¯.......");
-			//½øĞĞ×èÈû(»ñÈ¡¿Í»§¶Ësocket)
+			serverSocker = new ServerSocket(PROT);//ç›‘å¬ç«¯å£
+			System.out.println("Server å¯åŠ¨.......");
+			//è¿›è¡Œé˜»å¡(è·å–å®¢æˆ·ç«¯socket)
 			Socket socket = serverSocker.accept();
 			
-			//ĞÂ½¨Ò»¸öÏß³ÌÖ´ĞĞ¿Í»§¶ËµÄÈÎÎñ£¨Ã¿Ò»¸ö¿Í»§¶Ë£¬·şÎñ¶Ë¶¼»áĞÂ½¨Ò»¸öÏß³Ì´¦Àí£©
+			//æ–°å»ºä¸€ä¸ªçº¿ç¨‹æ‰§è¡Œå®¢æˆ·ç«¯çš„ä»»åŠ¡ï¼ˆæ¯ä¸€ä¸ªå®¢æˆ·ç«¯ï¼ŒæœåŠ¡ç«¯éƒ½ä¼šæ–°å»ºä¸€ä¸ªçº¿ç¨‹å¤„ç†ï¼‰
 			new Thread(new ServerHandler(socket)).start();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

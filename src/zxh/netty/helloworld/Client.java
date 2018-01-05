@@ -1,4 +1,4 @@
-package zhx.netty.helloworld;
+package zxh.netty.helloworld;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.Unpooled;

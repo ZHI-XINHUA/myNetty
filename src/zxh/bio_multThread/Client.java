@@ -1,4 +1,4 @@
-package zhx.bio_multThread;
+package zxh.bio_multThread;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 /**
-*¿Í»§¶Ë
+*å®¢æˆ·ç«¯
  */
 public class Client {
 	final static String ADDRESS = "127.0.0.1";
@@ -16,21 +16,21 @@ public class Client {
 		Socket socket = null;
 		BufferedReader in = null;
 		PrintWriter out = null;
-		for(int i=0;i<50;i++){//Ä£Äâ¶à¸ö¿Í»§¶Ë
+		for(int i=0;i<50;i++){//æ¨¡æ‹Ÿå¤šä¸ªå®¢æˆ·ç«¯
 			
 			try{
-					socket = new Socket(ADDRESS, PORT);//½¨Á¢Óë·þÎñÆ÷¶ËµÄÁ¬½Ó£¬Èç¹û·þÎñÆ÷Ã»Æô¶¯£¬±¨Connection refusedÒì³£
-					//¿ÉÒÔµÃµ½Ò»¸öÊäÈëÁ÷£¬¿Í»§¶ËµÄSocket¶ÔÏóÉÏµÄgetInputStream·½·¨µÃµ½ÊäÈëÁ÷ÆäÊµ¾ÍÊÇ´Ó·þÎñÆ÷¶Ë·¢»ØµÄÊý¾Ý¡£
+					socket = new Socket(ADDRESS, PORT);//å»ºç«‹ä¸ŽæœåŠ¡å™¨ç«¯çš„è¿žæŽ¥ï¼Œå¦‚æžœæœåŠ¡å™¨æ²¡å¯åŠ¨ï¼ŒæŠ¥Connection refusedå¼‚å¸¸
+					//å¯ä»¥å¾—åˆ°ä¸€ä¸ªè¾“å…¥æµï¼Œå®¢æˆ·ç«¯çš„Socketå¯¹è±¡ä¸Šçš„getInputStreamæ–¹æ³•å¾—åˆ°è¾“å…¥æµå…¶å®žå°±æ˜¯ä»ŽæœåŠ¡å™¨ç«¯å‘å›žçš„æ•°æ®ã€‚
 					in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-					//µÃµ½µÄÊÇÒ»¸öÊä³öÁ÷£¬¿Í»§¶ËµÄSocket¶ÔÏóÉÏµÄgetOutputStream·½·¨µÃµ½µÄÊä³öÁ÷ÆäÊµ¾ÍÊÇ·¢ËÍ¸ø·þÎñÆ÷¶ËµÄÊý¾Ý¡£·þÎñÆ÷¶ËÉÏµÄÊ¹ÓÃ
+					//å¾—åˆ°çš„æ˜¯ä¸€ä¸ªè¾“å‡ºæµï¼Œå®¢æˆ·ç«¯çš„Socketå¯¹è±¡ä¸Šçš„getOutputStreamæ–¹æ³•å¾—åˆ°çš„è¾“å‡ºæµå…¶å®žå°±æ˜¯å‘é€ç»™æœåŠ¡å™¨ç«¯çš„æ•°æ®ã€‚æœåŠ¡å™¨ç«¯ä¸Šçš„ä½¿ç”¨
 					out = new PrintWriter(socket.getOutputStream(), true);
 					
-					//Ïò·þÎñÆ÷¶Ë·¢ËÍÐÅÏ¢
-					out.println("ÎÒÊÇ¿Í»§¶ËÐÅÏ¢"+i);
+					//å‘æœåŠ¡å™¨ç«¯å‘é€ä¿¡æ¯
+					out.println("æˆ‘æ˜¯å®¢æˆ·ç«¯ä¿¡æ¯"+i);
 					
-					//»ñÈ¡·þÎñÆ÷ÏìÓ¦ÐÅÏ¢
+					//èŽ·å–æœåŠ¡å™¨å“åº”ä¿¡æ¯
 					String response = in.readLine();
-					System.out.println("Client»ñÈ¡ServerÏìÓ¦ÐÅÏ¢: " + response);
+					System.out.println("ClientèŽ·å–Serverå“åº”ä¿¡æ¯: " + response);
 				
 			}catch(Exception e){
 				e.printStackTrace();

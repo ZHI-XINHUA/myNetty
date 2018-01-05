@@ -1,4 +1,4 @@
-package zhx.bio_multThread;
+package zxh.bio_multThread;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -12,14 +12,14 @@ public class Server {
 		ServerSocket serverSocker = null;
 		
 		try{
-			serverSocker = new ServerSocket(PORT);//¼àÌı¶Ë¿Ú
-			System.out.println("Server Æô¶¯");
+			serverSocker = new ServerSocket(PORT);//ç›‘å¬ç«¯å£
+			System.out.println("Server å¯åŠ¨");
 			
 			Socket socket = null;
-			HandlerExecutorPool executorPool = new HandlerExecutorPool(50,1000);//×Ô¶¨ÒåÏß³Ì³Ø£¬
-			while(true){//·şÎñ¶ËÒ»Ö±ÔËĞĞ
-				socket = serverSocker.accept();//½øĞĞ×èÈû(»ñÈ¡¿Í»§¶Ësocket)
-				executorPool.execute(new ServerHandler(socket));//ÔÚÏß³ÌÖĞ´¦Àí¿Í»§¶Ë£¨Ò»¸öÏß³Ì´¦ÀíÒ»¸ö¿Í»§¶Ë£©
+			HandlerExecutorPool executorPool = new HandlerExecutorPool(50,1000);//è‡ªå®šä¹‰çº¿ç¨‹æ± ï¼Œ
+			while(true){//æœåŠ¡ç«¯ä¸€ç›´è¿è¡Œ
+				socket = serverSocker.accept();//è¿›è¡Œé˜»å¡(è·å–å®¢æˆ·ç«¯socket)
+				executorPool.execute(new ServerHandler(socket));//åœ¨çº¿ç¨‹ä¸­å¤„ç†å®¢æˆ·ç«¯ï¼ˆä¸€ä¸ªçº¿ç¨‹å¤„ç†ä¸€ä¸ªå®¢æˆ·ç«¯ï¼‰
 			}
 			
 		}catch(Exception e){

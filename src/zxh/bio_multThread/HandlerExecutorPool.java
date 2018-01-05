@@ -1,4 +1,4 @@
-package zhx.bio_multThread;
+package zxh.bio_multThread;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
@@ -6,13 +6,13 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
-* @Description: 服务器线程池
+* @Description: 鏈嶅姟鍣ㄧ嚎绋嬫睜
  */
 public class HandlerExecutorPool {
 	private ExecutorService executor;
 	
 	public HandlerExecutorPool(int maxPoolSize,int queueSize){
-		//自定义线程池
+		//鑷畾涔夌嚎绋嬫睜
 		this.executor = new ThreadPoolExecutor(Runtime.getRuntime().availableProcessors(), 
 				maxPoolSize, 
 				120L,
@@ -22,7 +22,7 @@ public class HandlerExecutorPool {
 	}
 	
 	/**
-	* 执行线程方法
+	* 鎵ц绾跨▼鏂规硶
 	 */
 	public void execute(Runnable runnable){
 		this.executor.execute(runnable);

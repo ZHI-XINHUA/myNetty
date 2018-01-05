@@ -1,4 +1,4 @@
-package zhx.bio;
+package zxh.bio;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 /**
-* ·şÎñ¶Ë´¦ÀíÀà
+* æœåŠ¡ç«¯å¤„ç†ç±»
  */
 public class ServerHandler implements Runnable{
 	private Socket socket;
@@ -21,17 +21,17 @@ public class ServerHandler implements Runnable{
 		BufferedReader in = null;
 		PrintWriter out = null;
 		try{
-			//µÃµ½µÄÊÇÒ»¸öÊäÈëÁ÷¡£·şÎñ¶ËµÄSocket¶ÔÏóÉÏµÄgetInputStream·½·¨µÃµ½µÄÊäÈëÁ÷ÆäÊµ¾ÍÊÇ´Ó¿Í»§¶Ë·¢ËÍ¸ø·şÎñÆ÷¶ËµÄÊı¾İÁ÷¡£
+			//å¾—åˆ°çš„æ˜¯ä¸€ä¸ªè¾“å…¥æµã€‚æœåŠ¡ç«¯çš„Socketå¯¹è±¡ä¸Šçš„getInputStreamæ–¹æ³•å¾—åˆ°çš„è¾“å…¥æµå…¶å®å°±æ˜¯ä»å®¢æˆ·ç«¯å‘é€ç»™æœåŠ¡å™¨ç«¯çš„æ•°æ®æµã€‚
 			in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
-			//µÃµ½µÄÊÇÒ»¸öÊä³öÁ÷£¬·şÎñ¶ËµÄSocket¶ÔÏóÉÏµÄgetOutputStream·½·¨µÃµ½µÄÊä³öÁ÷ÆäÊµ¾ÍÊÇ·¢ËÍ¸ø¿Í»§¶ËµÄÊı¾İ¡£
+			//å¾—åˆ°çš„æ˜¯ä¸€ä¸ªè¾“å‡ºæµï¼ŒæœåŠ¡ç«¯çš„Socketå¯¹è±¡ä¸Šçš„getOutputStreamæ–¹æ³•å¾—åˆ°çš„è¾“å‡ºæµå…¶å®å°±æ˜¯å‘é€ç»™å®¢æˆ·ç«¯çš„æ•°æ®ã€‚
 			out = new PrintWriter(this.socket.getOutputStream(), true);
 			
 			String msg = "";
 			while(true){
 				msg = in.readLine();
 				if(msg==null) break;
-				System.out.println("Server»ñÈ¡ ClientĞÅÏ¢:" + msg); //Êä³ö¿Í»§¶Ë·¢ËÍÏûÏ¢
-				out.println("ÎÒÊÇ·şÎñ¶ËµÄÊı¾İ.");//·şÎñ¶Ë·¢ËÍÏûÏ¢¸ø¿Í»§¶Ë
+				System.out.println("Serverè·å– Clientä¿¡æ¯:" + msg); //è¾“å‡ºå®¢æˆ·ç«¯å‘é€æ¶ˆæ¯
+				out.println("æˆ‘æ˜¯æœåŠ¡ç«¯çš„æ•°æ®.");//æœåŠ¡ç«¯å‘é€æ¶ˆæ¯ç»™å®¢æˆ·ç«¯
 			}
 		}catch(Exception e){
 			e.printStackTrace();

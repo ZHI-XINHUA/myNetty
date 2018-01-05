@@ -8,26 +8,26 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
 
 	@Override
 	public void completed(AsynchronousSocketChannel asc, Server attachment) {
-		//µ±ÓĞÏÂÒ»¸ö¿Í»§¶Ë½ÓÈëµÄÊ±ºò Ö±½Óµ÷ÓÃServerµÄaccept·½·¨£¬ÕâÑù·´¸´Ö´ĞĞÏÂÈ¥£¬±£Ö¤¶à¸ö¿Í»§¶Ë¶¼¿ÉÒÔ×èÈû
+		//å½“æœ‰ä¸‹ä¸€ä¸ªå®¢æˆ·ç«¯æ¥å…¥çš„æ—¶å€™ ç›´æ¥è°ƒç”¨Serverçš„acceptæ–¹æ³•ï¼Œè¿™æ ·åå¤æ‰§è¡Œä¸‹å»ï¼Œä¿è¯å¤šä¸ªå®¢æˆ·ç«¯éƒ½å¯ä»¥é˜»å¡
 		attachment.assc.accept(attachment, this);
 		read(asc);
 	}
 	
 	private void read(final AsynchronousSocketChannel asc){
-		//½¨Á¢¶Á»º´æÇø
+		//å»ºç«‹è¯»ç¼“å­˜åŒº
 		ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
 		asc.read(byteBuffer, byteBuffer, new CompletionHandler<Integer, ByteBuffer>() {
 
 			@Override
 			public void completed(Integer resultSize, ByteBuffer attachment) {
-				//½øĞĞ¶ÁÈ¡Ö®ºó,ÖØÖÃ±êÊ¶Î»
+				//è¿›è¡Œè¯»å–ä¹‹å,é‡ç½®æ ‡è¯†ä½
 				attachment.flip();
-				//»ñµÃ¶ÁÈ¡µÄ×Ö½ÚÊı
-				System.out.println("Server -> " + "ÊÕµ½¿Í»§¶ËµÄÊı¾İ³¤¶ÈÎª:" + resultSize);
-				//»ñÈ¡¶ÁÈ¡µÄÊı¾İ
+				//è·å¾—è¯»å–çš„å­—èŠ‚æ•°
+				System.out.println("Server -> " + "æ”¶åˆ°å®¢æˆ·ç«¯çš„æ•°æ®é•¿åº¦ä¸º:" + resultSize);
+				//è·å–è¯»å–çš„æ•°æ®
 				String resultData = new String(attachment.array()).trim();
-				System.out.println("Server -> " + "ÊÕµ½¿Í»§¶ËµÄÊı¾İĞÅÏ¢Îª:" + resultData);
-				String response = "·şÎñÆ÷ÏìÓ¦, ÊÕµ½ÁË¿Í»§¶Ë·¢À´µÄÊı¾İ: " + resultData;
+				System.out.println("Server -> " + "æ”¶åˆ°å®¢æˆ·ç«¯çš„æ•°æ®ä¿¡æ¯ä¸º:" + resultData);
+				String response = "æœåŠ¡å™¨å“åº”, æ”¶åˆ°äº†å®¢æˆ·ç«¯å‘æ¥çš„æ•°æ®: " + resultData;
 				write(asc, response);
 				
 			}
@@ -41,13 +41,13 @@ public class ServerCompletionHandler implements CompletionHandler<AsynchronousSo
 	}
 	
 	private void write(final AsynchronousSocketChannel asc,String responseMsg){
-		//1¡¢½¨Á¢Ğ´»º´æÇø
+		//1ã€å»ºç«‹å†™ç¼“å­˜åŒº
 		ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-		//2¡¢Ğ´ÈëÊı¾İ
+		//2ã€å†™å…¥æ•°æ®
 		byteBuffer.put(responseMsg.getBytes());
-		//3¡¢¸´Î»
+		//3ã€å¤ä½
 		byteBuffer.flip();
-		//4¡¢Ğ´Èë¹ÜµÀ
+		//4ã€å†™å…¥ç®¡é“
 		asc.write(byteBuffer);
 		
 	}

@@ -9,7 +9,7 @@ import java.nio.channels.AsynchronousSocketChannel;
 public class Client implements Runnable{
 	private String address = "127.0.0.1";
 	private int port = 8765;
-	//客户端通道
+	//瀹㈡埛绔�氶亾
 	private AsynchronousSocketChannel asc;
 	
 	public Client() throws IOException{
