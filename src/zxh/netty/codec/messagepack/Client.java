@@ -1,6 +1,5 @@
 package zxh.netty.codec.messagepack;
 
-import zxh.netty.codec.marshalling.MarshallingCodeCFactory;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -26,10 +25,13 @@ public class Client {
 
 				@Override
 				protected void initChannel(SocketChannel sc) throws Exception {
-					sc.pipeline().addLast("frameDecoder",new LengthFieldBasedFrameDecoder(65535, 0, 8,0,8));
-					sc.pipeline().addLast("msgPack Decoder",new MsgPackDecoder());
-					sc.pipeline().addLast("frameEncoder",new LengthFieldPrepender(8));
-					sc.pipeline().addLast("msgPack Encoder",new MsgPackEncoder());
+					 //LengthFieldBasedFrameDecoder用于处理半包消息
+                    //这样后面的MsgpackDecoder接收的永远是整包消息
+					sc.pipeline().addLast("frameDecoder",new LengthFieldBasedFrameDecoder(65535,0,2,0,2));
+					sc.pipeline().addLast("msgpack decoder",new MsgPackDecoder());
+                    //在ByteBuf之前增加2个字节的消息长度字段
+					sc.pipeline().addLast("frameEncoder",new LengthFieldPrepender(2)); 
+					sc.pipeline().addLast("msgpack encoder",new MsgPackEncoder());
 					sc.pipeline().addLast(new ClientHandler());
 					
 				}
@@ -40,7 +42,7 @@ public class Client {
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
-			
+			group.shutdownGracefully();
 		}
 	}
 
