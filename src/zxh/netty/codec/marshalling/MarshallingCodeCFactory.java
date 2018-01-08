@@ -7,10 +7,13 @@ import org.jboss.marshalling.Marshalling;
 import org.jboss.marshalling.MarshallingConfiguration;
 
 /**
- * Created by zhixinhua on 18/1/7.
+ * Jboss Marshalling编解码
  */
 public class MarshallingCodeCFactory {
 
+	/**
+	* @Description:  创建Jboss Marshalling解码器MarshallingDecoder
+	 */
     public static MarshallingDecoder buildMarshallingDecoder(){
         final MarshallerFactory marshallerFactory = Marshalling.getProvidedMarshallerFactory("serial");
         final MarshallingConfiguration configuration = new MarshallingConfiguration();
@@ -20,6 +23,10 @@ public class MarshallingCodeCFactory {
         return decoder;
     }
 
+    
+    /**
+    * @Description: 创建Jboss Marshalling编码器MarshallingEncoder
+     */
     public static MarshallingEncoder buildMarshallingEncoder(){
         final MarshallerFactory marshallerFactory = Marshalling.getProvidedMarshallerFactory("serial");
         final MarshallingConfiguration configuration = new MarshallingConfiguration();

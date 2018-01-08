@@ -24,12 +24,8 @@ public class SubReqClient {
                         @Override
                         public void initChannel(SocketChannel ch)
                                 throws Exception {
-                            ch.pipeline().addLast(
-                                    MarshallingCodeCFactory
-                                            .buildMarshallingDecoder());
-                            ch.pipeline().addLast(
-                                    MarshallingCodeCFactory
-                                            .buildMarshallingEncoder());
+                            ch.pipeline().addLast(MarshallingCodeCFactory.buildMarshallingDecoder());
+                            ch.pipeline().addLast(MarshallingCodeCFactory.buildMarshallingEncoder());
                             ch.pipeline().addLast(new SubReqClientHandler());
                         }
                     });
