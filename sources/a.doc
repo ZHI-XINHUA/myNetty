@@ -1,0 +1,336 @@
+Message-ID: <2112651934.1569.1433229572010.JavaMail.javamailuser@localhost>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_1568_634136164.1433229572009"
+
+------=_Part_1568_634136164.1433229572009
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>=E4=BD=BF=E7=94=A8Liquibase=E5=81=9A=E6=95=B0=E6=8D=AE=E5=BA=93=
+=E7=9A=84=E6=8C=81=E7=BB=AD=E9=9B=86=E6=88=90</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+#main {
+    padding-bottom: 1em !important; /* The default padding of 6em is too mu=
+ch for printouts */
+}
+
+body {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    font-size: 10pt;
+    line-height: 1.2;
+}
+
+body, #full-height-container, #main, #page, #content, .has-personal-sidebar=
+ #content {
+    background: #fff    !important;
+    color: #000         !important;
+    border: 0           !important;
+    width: 100%         !important;
+    height: auto        !important;
+    min-height: auto    !important;
+    margin: 0           !important;
+    padding: 0          !important;
+    display: block      !important;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: #000;
+}
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#content h5,
+#content h6 {
+    font-family: Arial, Helvetica, FreeSans, sans-serif;
+    page-break-after: avoid;
+}
+pre {
+    font-family: Monaco, "Courier New", monospace;
+}
+
+#header,
+.aui-header-inner,
+#navigation,
+#sidebar,
+.sidebar,
+#personal-info-sidebar,
+.ia-fixed-sidebar,
+.page-actions,
+.navmenu,
+.ajs-menu-bar,
+.noprint,
+.inline-control-link,
+.inline-control-link a,
+a.show-labels-editor,
+.global-comment-actions,
+.comment-actions,
+.quick-comment-container,
+#addcomment {
+    display: none !important;
+}
+
+.comment .date::before {
+    content: none !important; /* remove middot for print view */
+}
+
+h1.pagetitle img {
+    height: auto;
+    width: auto;
+}
+
+.print-only {
+    display: block;
+}
+#footer {
+    position: relative !important; /* CONF-17506 Place the footer at end of=
+ the content */
+    margin: 0;
+    padding: 0;
+    background: none;
+    clear: both;
+}
+
+#poweredby {
+    border-top: none;
+    background: none;
+}
+
+#poweredby li.print-only {
+    display: list-item;
+    font-style: italic;
+}
+
+#poweredby li.noprint {
+    display:none;
+}
+
+
+/* no width controls in print */
+.wiki-content .table-wrap,
+.wiki-content p,
+.panel .codeContent,
+.panel .codeContent pre,
+.image-wrap {
+    overflow: visible !important;
+}
+
+/* TODO - should this work? */
+#children-section,
+#comments-section .comment,
+#comments-section .comment .comment-body,
+#comments-section .comment .comment-content,
+#comments-section .comment p {
+    page-break-inside: avoid;
+}
+
+#page-children a {
+    text-decoration: none;
+}
+
+/**
+ hide twixies
+
+ the specificity here is a hack because print styles
+ are getting loaded before the base styles. */
+#comments-section.pageSection .section-header,
+#comments-section.pageSection .section-title,
+#children-section.pageSection .section-header,
+#children-section.pageSection .section-title,
+.children-show-hide {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.children-show-hide.icon {
+    display: none;
+}
+
+/* personal sidebar */
+.has-personal-sidebar #content {
+    margin-right: 0px;
+}
+
+.has-personal-sidebar #content .pageSection {
+    margin-right: 0px;
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>=E4=BD=BF=E7=94=A8Liquibase=E5=81=9A=E6=95=B0=E6=8D=AE=E5=BA=93=E7=
+=9A=84=E6=8C=81=E7=BB=AD=E9=9B=86=E6=88=90</h1>
+    <div class=3D"Section1">
+        <p>=E6=AF=8F=E4=B8=AA=E7=B3=BB=E7=BB=9F=E9=9C=80=E8=A6=81=E7=BB=B4=
+=E6=8A=A4=E8=87=AA=E5=B7=B1=E7=9A=84=E6=95=B0=E6=8D=AE=E5=BA=93=E8=84=9A=E6=
+=9C=AC=EF=BC=8C=E8=BF=99=E4=B8=AA=E8=84=9A=E6=9C=AC=E6=96=87=E4=BB=B6=E6=88=
+=91=E4=BB=AC=E9=87=87=E7=94=A8Liquibase=E7=9A=84=E6=A0=BC=E5=BC=8F=EF=BC=8C=
+changeset=E6=A0=BC=E5=BC=8F=E8=AF=B7=E5=8F=82=E8=80=83=E5=AE=98=E6=96=B9=E7=
+=BD=91=E7=AB=99</p>
+<p><a href=3D"http://www.liquibase.org/documentation/changeset.html" class=
+=3D"external-link" rel=3D"nofollow">http://www.liquibase.org/documentation/=
+changeset.html</a></p>
+<p>&nbsp;</p>
+<p>=E5=9C=A8=E6=88=91=E4=BB=AC=E7=9A=84backend=E7=B3=BB=E7=BB=9F=E4=B8=AD=
+=EF=BC=8C=E9=87=87=E7=94=A8=E4=BB=A5=E4=B8=8B=E6=96=B9=E5=BC=8F=E4=B8=8ELiq=
+uibase=E9=9B=86=E6=88=90=EF=BC=8C=E5=9C=A8spring=E6=96=87=E4=BB=B6=E4=B8=AD=
+=E6=A0=B9=E6=8D=AE=E8=87=AA=E5=B7=B1=E7=9A=84=E7=B3=BB=E7=BB=9F=E6=83=85=E5=
+=86=B5=E5=81=9A=E4=BB=A5=E4=B8=8B=E9=85=8D=E7=BD=AE</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"theme: Eclipse; brush: xml; gutter: false" style=3D"font-size=
+:12px;">    &lt;!-- =E4=B8=9A=E5=8A=A1=E6=95=B0=E6=8D=AE=E5=BA=93=E7=9A=84=
+=E6=8C=81=E7=BB=AD=E9=9B=86=E6=88=90 --&gt;
+=09&lt;bean id=3D&quot;bizLiquibase&quot; class=3D&quot;com.ippjr.common.ds=
+.ci.IPPJRSpringLiquibase&quot; lazy-init=3D&quot;false&quot;&gt;
+=09=09&lt;property name=3D&quot;dataSource&quot; ref=3D&quot;dataSource&quo=
+t; /&gt;
+=09=09&lt;property name=3D&quot;changeLog&quot; value=3D&quot;classpath:biz=
+-db-changelog.xml&quot; /&gt;
+=09&lt;/bean&gt;
+=09
+=09&lt;!-- =E8=8F=9C=E5=8D=95=E6=95=B0=E6=8D=AE=EF=BC=8C=E7=BB=B4=E6=8A=A4=
+=E8=87=AA=E5=B7=B1=E7=B3=BB=E7=BB=9F=E5=9C=A8=E6=9D=83=E9=99=90=E7=B3=BB=E7=
+=BB=9F=E7=9A=84=E8=8F=9C=E5=8D=95=E6=95=B0=E6=8D=AE --&gt;
+=09&lt;bean id=3D&quot;menuLiquibase&quot; class=3D&quot;com.ippjr.common.d=
+s.ci.IPPJRSpringLiquibase&quot; lazy-init=3D&quot;false&quot;&gt;
+=09=09&lt;property name=3D&quot;dataSource&quot; ref=3D&quot;dataSource&quo=
+t; /&gt;
+=09=09&lt;property name=3D&quot;changeLog&quot; value=3D&quot;classpath:men=
+u-db-changelog.xml&quot; /&gt;
+=09&lt;/bean&gt;
+=09
+=09&lt;!-- =E6=9D=83=E9=99=90=E7=B3=BB=E7=BB=9F=E7=9A=84=E6=95=B0=E6=8D=AE=
+=E6=BA=90=EF=BC=8C=E9=9C=80=E8=A6=81=E5=9C=A8=E9=85=8D=E7=BD=AE=E4=B8=AD=E5=
+=BF=83=E9=85=8D=E7=BD=AE=E4=B8=80=E4=B8=AA=E5=85=A8=E5=B1=80=E7=9A=84=E6=95=
+=B0=E6=8D=AE=E6=BA=90 --&gt;
+=09&lt;bean id=3D&quot;menuDataSource&quot; class=3D&quot;com.ippjr.common.=
+ds.IPPJRDataSource&quot;&gt;
+=09=09&lt;constructor-arg ref=3D&quot;menuConfManager&quot; /&gt;
+=09=09&lt;property name=3D&quot;minPoolSize&quot; value=3D&quot;1&quot; /&g=
+t;
+=09=09&lt;property name=3D&quot;maxPoolSize&quot; value=3D&quot;20&quot; /&=
+gt;
+=09=09&lt;property name=3D&quot;initialPoolSize&quot; value=3D&quot;1&quot;=
+ /&gt;
+=09=09&lt;property name=3D&quot;maxIdleTime&quot; value=3D&quot;25000&quot;=
+ /&gt;
+=09=09&lt;property name=3D&quot;acquireIncrement&quot; value=3D&quot;3&quot=
+; /&gt;
+=09=09&lt;property name=3D&quot;acquireRetryAttempts&quot; value=3D&quot;10=
+&quot; /&gt;
+=09=09&lt;property name=3D&quot;acquireRetryDelay&quot; value=3D&quot;1000&=
+quot; /&gt;
+=09&lt;/bean&gt;
+=09&lt;!-- =E4=B8=9A=E5=8A=A1=E7=B3=BB=E7=BB=9F=E8=87=AA=E5=B7=B1=E7=9A=84=
+=E6=95=B0=E6=8D=AE=E6=BA=90 --&gt;
+=09&lt;bean id=3D&quot;bizDataSource&quot; class=3D&quot;com.ippjr.common.d=
+s.IPPJRDataSource&quot;&gt;
+=09=09&lt;constructor-arg ref=3D&quot;bizConfManager&quot; /&gt;
+=09=09&lt;property name=3D&quot;minPoolSize&quot; value=3D&quot;1&quot; /&g=
+t;
+=09=09&lt;property name=3D&quot;maxPoolSize&quot; value=3D&quot;20&quot; /&=
+gt;
+=09=09&lt;property name=3D&quot;initialPoolSize&quot; value=3D&quot;1&quot;=
+ /&gt;
+=09=09&lt;property name=3D&quot;maxIdleTime&quot; value=3D&quot;25000&quot;=
+ /&gt;
+=09=09&lt;property name=3D&quot;acquireIncrement&quot; value=3D&quot;3&quot=
+; /&gt;
+=09=09&lt;property name=3D&quot;acquireRetryAttempts&quot; value=3D&quot;10=
+&quot; /&gt;
+=09=09&lt;property name=3D&quot;acquireRetryDelay&quot; value=3D&quot;1000&=
+quot; /&gt;
+=09&lt;/bean&gt;
+=09&lt;!-- =E4=BC=9A=E5=8E=BB=E9=85=8D=E7=BD=AE=E4=B8=AD=E5=BF=83=E6=9F=A5=
+=E8=AF=A2=E8=87=AA=E5=B7=B1=E4=B8=9A=E5=8A=A1=E7=B3=BB=E7=BB=9F=E7=9A=84=E9=
+=85=8D=E7=BD=AE=E4=BF=A1=E6=81=AF --&gt;
+=09&lt;bean id=3D&quot;bizConfManager&quot; class=3D&quot;com.ippjr.common.=
+config.IPPJRConfigurationManager&quot; lazy-init=3D&quot;false&quot;&gt;
+=09=09&lt;property name=3D&quot;appNamespace&quot; value=3D&quot;ippjr&quot=
+; /&gt;
+=09=09&lt;property name=3D&quot;appName&quot; value=3D&quot;ippjr-timer&quo=
+t; /&gt;
+=09&lt;/bean&gt;
+=09
+=09&lt;!-- =E6=9C=89=E8=8F=9C=E5=8D=95=E6=95=B0=E6=8D=AE=E7=9A=84=E7=B3=BB=
+=E7=BB=9F=E9=9C=80=E8=A6=81=E7=8B=AC=E7=AB=8B=E9=85=8D=E7=BD=AE=E8=AF=A5=E9=
+=A1=B9=EF=BC=8C=E4=BC=9A=E5=8E=BB=E9=85=8D=E7=BD=AE=E4=B8=AD=E5=BF=83=E6=9F=
+=A5=E8=AF=A2=E6=9D=83=E9=99=90=E7=B3=BB=E7=BB=9F=E7=9A=84=E6=95=B0=E6=8D=AE=
+=E5=BA=93=E4=BF=A1=E6=81=AF --&gt;
+=09&lt;bean id=3D&quot;menuConfManager&quot; class=3D&quot;com.ippjr.common=
+.config.IPPJRConfigurationManager&quot; lazy-init=3D&quot;false&quot;&gt;
+=09=09&lt;property name=3D&quot;appNamespace&quot; value=3D&quot;ippjr&quot=
+; /&gt;
+=09=09&lt;property name=3D&quot;appName&quot; value=3D&quot;ippjr-menu-repo=
+&quot; /&gt;
+=09&lt;/bean&gt;</pre>=20
+</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>=E6=A0=B9=E6=8D=AE=E7=8E=B0=E6=9C=89=E6=95=B0=E6=8D=AE=E5=BA=93=E7=94=9F=
+=E6=88=90change-log.xml</p>=20
+<div class=3D"aui-message hint shadowed information-macro">=20
+<span class=3D"aui-icon icon-hint">Icon</span>=20
+<div class=3D"message-content">
+ liquibase --driver=3Doracle.jdbc.driver.OracleDriver --classpath=3DE:\mave=
+nRepository\oracle\ojdbc14\10.2.0.4\ojdbc14-10.2.0.4.jar --changeLogFile=3D=
+db.changelog.xml --url=3D&quot;jdbc:oracle:thin:@10.1.10.65:1521/ppjr&quot;=
+ --username=3DIPPJR_EMPLOYEE --password=3DIPPJR_EMPLOYEE generateChangeLog=
+=20
+</div>=20
+</div>
+    </div>
+</body>
+</html>
+------=_Part_1568_634136164.1433229572009--
