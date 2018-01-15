@@ -1,4 +1,4 @@
-package zxh.netty.heartbeat;
+package zxh.netty.heartbeat_schedule;
 
 import java.io.Serializable;
 import java.util.HashMap;

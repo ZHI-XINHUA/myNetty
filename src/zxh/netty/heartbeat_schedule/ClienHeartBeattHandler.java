@@ -1,4 +1,4 @@
-package zxh.netty.heartbeat;
+package zxh.netty.heartbeat_schedule;
 
 import java.net.InetAddress;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package zxh.netty.heartbeat;
+package zxh.netty.heartbeat_schedule;
 
 import org.jboss.marshalling.MarshallerFactory;
 import org.jboss.marshalling.Marshalling;

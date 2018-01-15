@@ -1,4 +1,4 @@
-package zxh.netty.heartbeat;
+package zxh.netty.heartbeat_schedule;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
