@@ -11,19 +11,19 @@ import io.netty.channel.ChannelHandler.Sharable;
 
 @Sharable
 public class ConnectorIdleStateTrigger extends ChannelHandlerAdapter {
-	 private static final ByteBuf HEARTBEAT_SEQUENCE = Unpooled.unreleasableBuffer(Unpooled.copiedBuffer("Heartbeat",
-	            CharsetUtil.UTF_8));
+	private static final ByteBuf HEARTBEAT_SEQUENCE = Unpooled.unreleasableBuffer(Unpooled.copiedBuffer("Heartbeat",
+            CharsetUtil.UTF_8));
 
-	    @Override
-	    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
-	        if (evt instanceof IdleStateEvent) {
-	            IdleState state = ((IdleStateEvent) evt).state();
-	            if (state == IdleState.WRITER_IDLE) {
-	                // write heartbeat to server
-	                ctx.writeAndFlush(HEARTBEAT_SEQUENCE.duplicate());
-	            }
-	        } else {
-	            super.userEventTriggered(ctx, evt);
-	        }
-	    }
+    @Override
+    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        if (evt instanceof IdleStateEvent) {
+            IdleState state = ((IdleStateEvent) evt).state();
+            if (state == IdleState.WRITER_IDLE) {
+                // write heartbeat to server
+                ctx.writeAndFlush(HEARTBEAT_SEQUENCE.duplicate());
+            }
+        } else {
+            super.userEventTriggered(ctx, evt);
+        }
+    }
 }

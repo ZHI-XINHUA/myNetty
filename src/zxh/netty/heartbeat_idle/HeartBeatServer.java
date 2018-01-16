@@ -18,7 +18,8 @@ import java.util.concurrent.TimeUnit;
 
 public class HeartBeatServer {
     
-    private final AcceptorIdleStateTrigger idleStateTrigger = new AcceptorIdleStateTrigger();
+    
+	private final AcceptorIdleStateTrigger idleStateTrigger = new AcceptorIdleStateTrigger();
     
     private int port;
 
@@ -62,5 +63,6 @@ public class HeartBeatServer {
         }
         new HeartBeatServer(port).start();
     }
+
 
 }
