@@ -1,4 +1,4 @@
-package zhx.netty.heartbeat_idle;
+package zxh.netty.heartbeat_idle;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;

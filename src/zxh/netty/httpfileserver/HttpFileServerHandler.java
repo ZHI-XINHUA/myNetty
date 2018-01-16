@@ -1,4 +1,4 @@
-package zhx.netty.httpfileserver;
+package zxh.netty.httpfileserver;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

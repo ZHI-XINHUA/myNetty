@@ -1,4 +1,4 @@
-package zhx.netty.udp;
+package zxh.netty.udp;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

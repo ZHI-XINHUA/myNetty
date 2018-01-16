@@ -1,4 +1,4 @@
-package zhx.netty.heartbeat_idle;
+package zxh.netty.heartbeat_idle;
 
 import io.netty.channel.ChannelHandler;
 
