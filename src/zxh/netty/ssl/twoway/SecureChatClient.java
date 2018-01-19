@@ -1,4 +1,4 @@
-package zxh.netty.ssl.oneway;
+package zxh.netty.ssl.twoway;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
