@@ -19,8 +19,8 @@ public class SecureChatServerInitializer extends ChannelInitializer<SocketChanne
 		String sChatPath = (System.getProperty("user.dir")+ "/src/zxh/netty/ssl/conf/twoway/sChat.jks");
 		
 		SSLEngine engine = SecureChatSslContextFactory.getServerContext(sChatPath,sChatPath).createSSLEngine();
-		engine.setUseClientMode(false);
-	    engine.setNeedClientAuth(true);
+		engine.setUseClientMode(false);//设置服务端模式
+	    engine.setNeedClientAuth(true);//需要客户端验证
 		
 		pipeline.addLast("ssl", new SslHandler(engine));
 

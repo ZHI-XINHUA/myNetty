@@ -23,18 +23,24 @@ public final class SecureChatSslContextFactory {
 		InputStream in =null;
 		
 		try{
+			//密钥管理器
 			KeyManagerFactory kmf = null;
 			if(pkPath!=null){
-				//实例化KeyStore对象，JKS文件是使用keytool生成的keystore文件
+				//密钥库KeyStore
 				KeyStore ks = KeyStore.getInstance("JKS");
+				//加载服务端证书
 				in = new FileInputStream(pkPath);
+				//加载服务端的KeyStore  ；sNetty是生成仓库时设置的密码，用于检查密钥库完整性的密码
 				ks.load(in, "sNetty".toCharArray());
 				
 				kmf = KeyManagerFactory.getInstance("SunX509");
+				//初始化密钥管理器
 				kmf.init(ks, "sNetty".toCharArray());
 			}
-			
+			//获取安全套接字协议（TLS协议）的对象
 			SERVER_CONTEXT= SSLContext.getInstance(PROTOCOL);
+			//初始化此上下文
+			//参数一：认证的密钥      参数二：对等信任认证  参数三：伪随机数生成器 。 由于单向认证，服务端不用验证客户端，所以第二个参数为null
 			SERVER_CONTEXT.init(kmf.getKeyManagers(), null, null);
 			
 		}catch(Exception e){
@@ -58,16 +64,21 @@ public final class SecureChatSslContextFactory {
 		 
 		 InputStream tIN = null;
 		 try{
-			 TrustManagerFactory tf = null;
+			 //信任库 
+			TrustManagerFactory tf = null;
 			if (caPath != null) {
+				//密钥库KeyStore
 			    KeyStore tks = KeyStore.getInstance("JKS");
+			    //加载客户端证书
 			    tIN = new FileInputStream(caPath);
 			    tks.load(tIN, "cNetty".toCharArray());
 			    tf = TrustManagerFactory.getInstance("SunX509");
+			    // 初始化信任库  
 			    tf.init(tks);
 			}
 			 
 			 CLIENT_CONTEXT = SSLContext.getInstance(PROTOCOL);
+			 //设置信任证书
 			 CLIENT_CONTEXT.init(null,tf == null ? null : tf.getTrustManagers(), null);
 			 
 		 }catch(Exception e){

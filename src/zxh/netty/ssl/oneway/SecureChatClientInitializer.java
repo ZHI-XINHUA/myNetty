@@ -18,8 +18,9 @@ public class SecureChatClientInitializer extends ChannelInitializer<SocketChanne
 		ChannelPipeline pipeline = ch.pipeline();
 		String cChatPath =  System.getProperty("user.dir")+"/src/zxh/netty/ssl/conf/oneway/cChat.jks";
 		
-		SSLEngine engine = SecureChatSslContextFactory.getClientContext(cChatPath).createSSLEngine();
-		engine.setUseClientMode(true);
+		SSLEngine engine = SecureChatSslContextFactory.getClientContext(cChatPath)
+				.createSSLEngine();//创建SSLEngine
+		engine.setUseClientMode(true);//客户方模式
 		pipeline.addLast("ssl", new SslHandler(engine));
 
 		// On top of the SSL handler, add the text line codec.
